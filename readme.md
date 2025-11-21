@@ -77,12 +77,14 @@ PROJECT\_ROOT\
 │   └── bot\_brain.brn          # File não binary (tải nhanh)\
 │\
 ├── 📂 backend/                # Mã nguồn Python\
-│   ├── main.py                # FastAPI Server (Entry point)\
-│   ├── build\_aiml.py          # Script huấn luyện/sinh dữ liệu\
-│   ├── conversation\_config.py # Cấu hình hệ thống & Gợi ý\
-│   ├── bot\_config.py          # Cấu hình phản hồi\
-│   ├── legal\_dictionary.py    # Từ điển từ khóa pháp lý\
+│   ├── app.py                 # FastAPI Server (Entry point)\
+│   ├── convert_to_aiml.py     # Script huấn luyện/sinh dữ liệu\
 │   └── requirements.txt       # Danh sách thư viện\
+│\
+├──  📂 scripts/ 
+│      ├── convert_to_aiml.py     # Script huấn luyện/sinh dữ liệu\
+│      ├── legal\_dictionary.py   # Từ điển từ khóa pháp lý\
+│      ├── bot\_config.py         # Cấu hình phản hồi\
 │\
 └── 📂 frontend/               # Mã nguồn ReactJS\
 `    `├── src/\
