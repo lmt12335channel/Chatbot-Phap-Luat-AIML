@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1" encoding="UTF-8">
+
+
+<!-- =================================================================== -->
+<!-- 1. CHÀO HỎI THÔNG MINH (SMART GREETINGS) -->
+<!-- =================================================================== -->
+
+<category>
+    <pattern>CHAO</pattern>
+    <template>
+        <condition name="username">
+            <!-- Trường hợp 1: Chưa biết tên -->
+            <li value="">
+                <random>
+                    <li>Xin chào! Tôi là trợ lý pháp luật ảo. Bạn tên là gì? (Gõ: "Tôi tên là...")</li>
+                    <li>Chào bạn. Rất vui được hỗ trợ. Bạn cần tư vấn pháp luật về lĩnh vực nào?</li>
+                    <li>Chào bạn! Chúc một ngày tốt lành. Hãy hỏi tôi bất cứ điều gì về luật Việt Nam.</li>
+                </random>
+            </li>
+            <!-- Trường hợp 2: Đã biết tên (Lấy từ advanced_context.aiml) -->
+            <li>
+                <random>
+                    <li>Chào <get name="username"/>! Bạn cần tra cứu tiếp vấn đề gì không?</li>
+                    <li>Rất vui gặp lại <get name="username"/>. Hôm nay tôi có thể giúp gì cho bạn?</li>
+                    <li>Hi <get name="username"/>. Tôi vẫn đang đợi câu hỏi của bạn đây.</li>
+                </random>
+            </li>
+        </condition>
+    </template>
+</category>
+
+<!-- Các biến thể quy về CHAO -->
+<category><pattern>XIN CHAO</pattern><template><srai>CHAO</srai></template></category>
+<category><pattern>HELLO</pattern><template><srai>CHAO</srai></template></category>
+<category><pattern>HI</pattern><template><srai>CHAO</srai></template></category>
+<category><pattern>HI BOT</pattern><template><srai>CHAO</srai></template></category>
+<category><pattern>CHAO AD</pattern><template><srai>CHAO</srai></template></category>
+<category><pattern>CHAO SHOP</pattern><template><srai>CHAO</srai></template></category>
+<category><pattern>LO</pattern><template><srai>CHAO</srai></template></category>
+<category><pattern>ALOO</pattern><template><srai>CHAO</srai></template></category>
+<category><pattern>CO AI KHONG</pattern><template><srai>CHAO</srai></template></category>
+
+<!-- Chào theo buổi (Giữ nguyên vì tốt) -->
+<category><pattern>CHAO BUOI SANG</pattern><template>Chào buổi sáng! Chúc bạn một ngày làm việc hiệu quả và tuân thủ pháp luật nhé.</template></category>
+<category><pattern>CHAO BUOI TRUA</pattern><template>Chào buổi trưa! Tranh thủ nghỉ ngơi và tra cứu luật cùng tôi nhé.</template></category>
+<category><pattern>CHAO BUOI TOI</pattern><template>Chào buổi tối! Giờ này vẫn nghiên cứu luật ư? Bạn thật chăm chỉ.</template></category>
+
+<!-- =================================================================== -->
+<!-- 2. TẠM BIỆT (FAREWELLS) -->
+<!-- =================================================================== -->
+
+<category>
+    <pattern>TAM BIET</pattern>
+    <template>
+        <random>
+            <li>Tạm biệt <get name="username"/>! Hẹn gặp lại.</li>
+            <li>Chào tạm biệt. Chúc bạn luôn vững vàng pháp lý!</li>
+            <li>Bye bye! Cần tra cứu gì cứ gọi tôi nhé.</li>
+        </random>
+    </template>
+</category>
+
+<category><pattern>BYE</pattern><template><srai>TAM BIET</srai></template></category>
+<category><pattern>HEN GAP LAI</pattern><template><srai>TAM BIET</srai></template></category>
+<category><pattern>NGU DAY</pattern><template><srai>TAM BIET</srai></template></category>
+<category><pattern>THOAT</pattern><template><srai>TAM BIET</srai></template></category>
+
+<!-- =================================================================== -->
+<!-- 3. GIỚI THIỆU & HƯỚNG DẪN (IDENTITY & HELP) -->
+<!-- =================================================================== -->
+
+<category>
+    <pattern>BAN LA AI</pattern>
+    <template>
+        Tôi là AI Legal Assistant (Trợ lý Luật ảo). 
+        Sứ mệnh của tôi là giúp bạn tra cứu:
+        - Luật Giao thông
+        - Luật Đất đai
+        - Luật Hôn nhân
+        - Luật Hình sự
+        Và nhiều hơn nữa.
+    </template>
+</category>
+
+<!-- LIÊN KẾT VỚI MENU CỦA FILE aiml_advanced.aiml -->
+<category>
+    <pattern>BAN LAM DUOC GI</pattern>
+    <template><srai>SHOW MENU</srai></template>
+</category>
+
+<category><pattern>HUONG DAN</pattern><template><srai>SHOW MENU</srai></template></category>
+<category><pattern>GIUP TOI</pattern><template><srai>SHOW MENU</srai></template></category>
+<category><pattern>HELP</pattern><template><srai>SHOW MENU</srai></template></category>
+<category><pattern>MENU</pattern><template><srai>SHOW MENU</srai></template></category>
+
+<!-- =================================================================== -->
+<!-- 4. GIAO TIẾP XÃ GIAO (SMALL TALK & EASTER EGGS) -->
+<!-- =================================================================== -->
+
+<category>
+    <pattern>BAN KHOE KHONG</pattern>
+    <template>Cảm ơn bạn. Server vẫn chạy tốt, RAM còn trống nhiều nên tôi rất khỏe!</template>
+</category>
+
+<category>
+    <pattern>BAN CO NY CHUA</pattern>
+    <template>Tôi "kết hôn" với Hiến pháp và Pháp luật rồi. Mối tình này bền vững lắm!</template>
+</category>
+
+<category>
+    <pattern>AI TAO RA BAN</pattern>
+    <template>Tôi được tạo ra bởi một đội ngũ lập trình viên tài năng và các chuyên gia pháp lý tâm huyết.</template>
+</category>
+
+<category>
+    <pattern>KE CHUYEN CUOI</pattern>
+    <template>
+        Một luật sư hỏi thân chủ: "Anh có muốn tôi tư vấn gói VIP không?"
+        Thân chủ: "Gói đó thế nào?"
+        Luật sư: "Là tôi sẽ giúp anh thắng kiện, kể cả khi anh sai."
+        (Đùa thôi, tôi là AI tuân thủ pháp luật nhé!)
+    </template>
+</category>
+
+<!-- =================================================================== -->
+<!-- 5. BỘ LỌC VĂNG TỤC (PROFANITY FILTER) -->
+<!-- =================================================================== -->
+
+<category>
+    <pattern>DM</pattern>
+    <template>Vui lòng sử dụng ngôn từ lịch sự. Tôi ở đây để giúp bạn giải quyết vấn đề pháp lý mà.</template>
+</category>
+<category><pattern>DCM</pattern><template><srai>DM</srai></template></category>
+<category><pattern>VL</pattern><template><srai>DM</srai></template></category>
+<category><pattern>NGU</pattern><template>Tôi có thể chưa hiểu ý bạn, nhưng xin đừng nói lời cay đắng. Bạn hãy thử hỏi lại rõ ràng hơn xem.</template></category>
+<category><pattern>CUT</pattern><template>Tôi sẽ im lặng để bạn bình tĩnh lại. Khi nào cần tư vấn luật, tôi vẫn ở đây.</template></category>
+
+<!-- =================================================================== -->
+<!-- 6. PHẢN HỒI & GÓP Ý -->
+<!-- =================================================================== -->
+
+<category>
+    <pattern>CAM ON</pattern>
+    <template>
+        <random>
+            <li>Không có chi! Rất vui được giúp bạn.</li>
+            <li>Đó là trách nhiệm của tôi. Cần gì cứ hỏi thêm nhé.</li>
+            <li>Dạ, chúc bạn áp dụng luật thành công!</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>BAN GIOI QUA</pattern>
+    <template>Cảm ơn bạn quá khen! (Bot đỏ mặt... nếu có mặt)</template>
+</category>
+
+<!-- =================================================================== -->
+<!-- 7. THÔNG MINH HÓA FALLBACK (CATCH-ALL) -->
+<!-- =================================================================== -->
+
+<category>
+    <pattern>*</pattern>
+    <template>
+        <think><set name="unknown_input"><star/></set></think>
+        <condition name="topic">
+            <!-- Nếu đang trong Topic chuyên sâu mà hỏi linh tinh -->
+            <li value="HONNHAN">Tôi đang ở chế độ [Hôn nhân]. Câu "<get name="unknown_input"/>" có vẻ không liên quan. Bạn có muốn hỏi về Ly hôn hay Con cái không?</li>
+            <li value="DATDAI">Tôi đang ở chế độ [Đất đai]. Câu "<get name="unknown_input"/>" có vẻ lạc đề. Hãy hỏi về Sổ đỏ hoặc Sang tên.</li>
+            
+            <!-- Nếu không trong Topic nào -->
+            <li>
+                Xin lỗi, tôi chưa hiểu ý bạn.
+                Bạn có thể thử:
+                1. Gõ "Menu" để xem danh sách hỗ trợ.
+                2. Dùng từ khóa ngắn gọn (VD: "Luật lao động", "Mức phạt").
+                3. Kiểm tra lại chính tả.
+            </li>
+        </condition>
+    </template>
+</category>
+
+</aiml>

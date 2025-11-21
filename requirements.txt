@@ -1,0 +1,21 @@
+--- CORE BACKEND ---
+
+fastapi==0.109.0
+uvicorn==0.27.0
+python-aiml==0.9.3
+python-multipart==0.0.7
+
+--- DATA PROCESSING & AI ---
+
+pandas==2.2.0
+numpy==1.26.3
+scikit-learn==1.4.0
+pyarrow==15.0.0
+openpyxl==3.1.2
+tqdm==4.66.1
+
+--- ADMIN DASHBOARD ---
+
+streamlit==1.31.0
+plotly==5.18.0
+watchdog==4.0.0

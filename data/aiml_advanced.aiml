@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<!-- =================================================================== -->
+<!-- MODULE 0: MENU TỔNG                                                 -->
+<!-- =================================================================== -->
+<category>
+    <pattern>CONNECT</pattern>
+    <template>Hệ thống sẵn sàng.</template>
+</category>
+
+<category>
+    <pattern>SHOW MENU</pattern>
+    <template>
+        1. Giao thông 2. Đất đai 3. Hôn nhân 4. Cư trú
+        5. Hình sự 6. Quân sự 7. Doanh nghiệp 8. Lao động
+        (Gõ tên chủ đề bạn quan tâm).
+    </template>
+</category>
+<category><pattern>MENU</pattern><template><srai>SHOW MENU</srai></template></category>
+
+<!-- =================================================================== -->
+<!-- MODULE 1: KÍCH HOẠT CHỦ ĐỀ (BẮT DÍNH MỌI TRƯỜNG HỢP)                -->
+<!-- =================================================================== -->
+
+<!-- 1.1. GIAO THÔNG -->
+<category>
+    <pattern>KICH HOAT GIAO THONG</pattern>
+    <template><think><set name="topic">GIAOTHONG</set></think>Đã vào [GIAO THÔNG]. Bạn cần tra: "Mức phạt", "Nồng độ cồn" hay "Giấy tờ"?</template>
+</category>
+<!-- Bao vây 4 chiều -->
+<category><pattern>GIAO THONG</pattern><template><srai>KICH HOAT GIAO THONG</srai></template></category>
+<category><pattern>GIAO THONG *</pattern><template><srai>KICH HOAT GIAO THONG</srai></template></category>
+<category><pattern>* GIAO THONG</pattern><template><srai>KICH HOAT GIAO THONG</srai></template></category>
+<category><pattern>* GIAO THONG *</pattern><template><srai>KICH HOAT GIAO THONG</srai></template></category>
+
+<!-- 1.2. HÔN NHÂN -->
+<category>
+    <pattern>KICH HOAT HON NHAN</pattern>
+    <template><think><set name="topic">HONNHAN</set></think>Đã vào [HÔN NHÂN]. Hỗ trợ: "Ly hôn", "Kết hôn", "Con cái", "Tài sản".</template>
+</category>
+<!-- Bao vây 4 chiều -->
+<category><pattern>HON NHAN</pattern><template><srai>KICH HOAT HON NHAN</srai></template></category>
+<category><pattern>HON NHAN *</pattern><template><srai>KICH HOAT HON NHAN</srai></template></category>
+<category><pattern>* HON NHAN</pattern><template><srai>KICH HOAT HON NHAN</srai></template></category>
+<category><pattern>* HON NHAN *</pattern><template><srai>KICH HOAT HON NHAN</srai></template></category>
+<category><pattern>* GIA DINH *</pattern><template><srai>KICH HOAT HON NHAN</srai></template></category>
+
+<!-- 1.3. ĐẤT ĐAI -->
+<category>
+    <pattern>KICH HOAT DAT DAI</pattern>
+    <template><think><set name="topic">DATDAI</set></think>Đã vào [ĐẤT ĐAI]. Hỗ trợ: "Sổ đỏ", "Sang tên", "Tranh chấp".</template>
+</category>
+<!-- Bao vây 4 chiều -->
+<category><pattern>DAT DAI</pattern><template><srai>KICH HOAT DAT DAI</srai></template></category>
+<category><pattern>DAT DAI *</pattern><template><srai>KICH HOAT DAT DAI</srai></template></category>
+<category><pattern>* DAT DAI</pattern><template><srai>KICH HOAT DAT DAI</srai></template></category>
+<category><pattern>* DAT DAI *</pattern><template><srai>KICH HOAT DAT DAI</srai></template></category>
+
+<!-- 1.4. CƯ TRÚ -->
+<category>
+    <pattern>KICH HOAT CU TRU</pattern>
+    <template><think><set name="topic">CUTRU</set></think>Đã vào [CƯ TRÚ]. Hỗ trợ: "CCCD", "VNeID", "Hộ khẩu".</template>
+</category>
+<!-- Bao vây 4 chiều -->
+<category><pattern>CU TRU</pattern><template><srai>KICH HOAT CU TRU</srai></template></category>
+<category><pattern>CU TRU *</pattern><template><srai>KICH HOAT CU TRU</srai></template></category>
+<category><pattern>* CU TRU</pattern><template><srai>KICH HOAT CU TRU</srai></template></category>
+<category><pattern>* CU TRU *</pattern><template><srai>KICH HOAT CU TRU</srai></template></category>
+
+<!-- 1.5. HÌNH SỰ -->
+<category>
+    <pattern>KICH HOAT HINH SU</pattern>
+    <template><think><set name="topic">HINHSU</set></think>Chủ đề [HÌNH SỰ]. Hỗ trợ: "Trộm cắp", "Đánh bạc", "Thương tích".</template>
+</category>
+<category><pattern>HINH SU</pattern><template><srai>KICH HOAT HINH SU</srai></template></category>
+<category><pattern>HINH SU *</pattern><template><srai>KICH HOAT HINH SU</srai></template></category>
+<category><pattern>* HINH SU</pattern><template><srai>KICH HOAT HINH SU</srai></template></category>
+<category><pattern>* HINH SU *</pattern><template><srai>KICH HOAT HINH SU</srai></template></category>
+
+<!-- 1.6. QUÂN SỰ -->
+<category>
+    <pattern>KICH HOAT QUAN SU</pattern>
+    <template><think><set name="topic">QUANSU</set></think>Chủ đề [QUÂN SỰ]. Hỗ trợ: "Độ tuổi", "Tạm hoãn", "Khám sức khỏe".</template>
+</category>
+<category><pattern>QUAN SU</pattern><template><srai>KICH HOAT QUAN SU</srai></template></category>
+<category><pattern>QUAN SU *</pattern><template><srai>KICH HOAT QUAN SU</srai></template></category>
+<category><pattern>* QUAN SU</pattern><template><srai>KICH HOAT QUAN SU</srai></template></category>
+<category><pattern>* QUAN SU *</pattern><template><srai>KICH HOAT QUAN SU</srai></template></category>
+<category><pattern>* NVQS *</pattern><template><srai>KICH HOAT QUAN SU</srai></template></category>
+
+<!-- 1.7. DOANH NGHIỆP -->
+<category>
+    <pattern>KICH HOAT DOANH NGHIEP</pattern>
+    <template><think><set name="topic">DOANHNGHIEP</set></think>Chủ đề [DOANH NGHIỆP]. Hỗ trợ: "Thành lập", "Giải thể".</template>
+</category>
+<category><pattern>DOANH NGHIEP</pattern><template><srai>KICH HOAT DOANH NGHIEP</srai></template></category>
+<category><pattern>DOANH NGHIEP *</pattern><template><srai>KICH HOAT DOANH NGHIEP</srai></template></category>
+<category><pattern>* DOANH NGHIEP</pattern><template><srai>KICH HOAT DOANH NGHIEP</srai></template></category>
+<category><pattern>* DOANH NGHIEP *</pattern><template><srai>KICH HOAT DOANH NGHIEP</srai></template></category>
+
+<!-- 1.8. LAO ĐỘNG -->
+<category>
+    <pattern>KICH HOAT LAO DONG</pattern>
+    <template><think><set name="topic">LAODONG</set></think>Chủ đề [LAO ĐỘNG]. Hỗ trợ: "BHXH", "Thất nghiệp", "Thai sản".</template>
+</category>
+<category><pattern>LAO DONG</pattern><template><srai>KICH HOAT LAO DONG</srai></template></category>
+<category><pattern>LAO DONG *</pattern><template><srai>KICH HOAT LAO DONG</srai></template></category>
+<category><pattern>* LAO DONG</pattern><template><srai>KICH HOAT LAO DONG</srai></template></category>
+<category><pattern>* LAO DONG *</pattern><template><srai>KICH HOAT LAO DONG</srai></template></category>
+<category><pattern>LUAT LAO DONG</pattern><template><srai>KICH HOAT LAO DONG</srai></template></category>
+
+<!-- =================================================================== -->
+<!-- MODULE 2: CHI TIẾT CÁC CHỦ ĐỀ                                       -->
+<!-- =================================================================== -->
+
+<topic name="GIAOTHONG">
+    <category><pattern>* MUC PHAT *</pattern><template>Bạn tra cứu lỗi nào: Vượt đèn đỏ, Nồng độ cồn, hay Sai làn?</template></category>
+    <category><pattern>* VUOT DEN DO *</pattern><template><srai>LOI VUOT DEN DO</srai></template></category>
+    <category><pattern>* NONG DO CON *</pattern><template>Xe máy: tối đa 8tr, tước bằng 24 tháng. Ô tô: tối đa 40tr, tước bằng 24 tháng.</template></category>
+    <category><pattern>* SAI LAN *</pattern><template><srai>ABC SAI LAN ABC</srai></template></category>
+    <category><pattern>* QUEN BANG LAI *</pattern><template><srai>ABC QUEN BANG LAI ABC</srai></template></category>
+</topic>
+
+<topic name="HONNHAN">
+    <category><pattern>* KET HON *</pattern><template><srai>ABC HO SO KET HON ABC</srai></template></category>
+    <category><pattern>* LY HON *</pattern><template>Bạn chọn: "Thuận tình" hay "Đơn phương"?</template></category>
+    <category><pattern>* THUAN TINH *</pattern><template>Thuận tình: Nộp đơn tại Tòa án huyện. Cần cả 2 vợ chồng cùng ký.</template></category>
+    <category><pattern>* DON PHUONG *</pattern><template>Đơn phương: Nộp đơn tại Tòa án nơi BỊ ĐƠN cư trú.</template></category>
+    <category><pattern>* CON CAI *</pattern><template>Con dưới 36 tháng giao mẹ. Trên 7 tuổi hỏi ý kiến con.</template></category>
+    <category><pattern>* AN PHI *</pattern><template><srai>ABC AN PHI ABC</srai></template></category>
+</topic>
+
+<topic name="DATDAI">
+    <category><pattern>* SANG TEN *</pattern><template>Sang tên: Công chứng -> Thuế -> VP Đăng ký đất đai.</template></category>
+    <category><pattern>* PHI SANG TEN *</pattern><template>Thuế TNCN 2%, Lệ phí trước bạ 0.5%.</template></category>
+    <category><pattern>* CAP MOI *</pattern><template><srai>ABC CAP MOI SO DO ABC</srai></template></category>
+    <category><pattern>* SO DO *</pattern><template><srai>ABC CAP MOI SO DO ABC</srai></template></category>
+    <category><pattern>* TRANH CHAP *</pattern><template>Phải hòa giải tại UBND xã/phường trước khi khởi kiện.</template></category>
+</topic>
+
+<topic name="CUTRU">
+    <category><pattern>* CCCD *</pattern><template>Làm tại Công an huyện. Cần thông báo định danh cá nhân.</template></category>
+    <category><pattern>* VNEID *</pattern><template>VNeID mức 2 đăng ký tại Công an xã/phường.</template></category>
+    <category><pattern>* SO HO KHAU *</pattern><template>Sổ giấy đã bỏ. Dùng giấy xác nhận cư trú CT07.</template></category>
+    <category><pattern>* XAC NHAN CU TRU *</pattern><template><srai>ABC XAC NHAN CU TRU ABC</srai></template></category>
+</topic>
+
+<topic name="QUANSU">
+    <category><pattern>* DO TUOI *</pattern><template>Từ 18 đến 25 tuổi (hoặc 27 nếu học ĐH/CĐ).</template></category>
+    <category><pattern>* TAM HOAN *</pattern><template>Tạm hoãn: Sức khỏe kém, đang đi học, lao động chính.</template></category>
+    <category><pattern>* KHAM SUC KHOE *</pattern><template>Trốn khám phạt 25-35 triệu đồng.</template></category>
+</topic>
+
+<topic name="HINHSU">
+    <category><pattern>* TROM CAP *</pattern><template>Dưới 2tr phạt hành chính. Trên 2tr xử lý hình sự.</template></category>
+    <category><pattern>* DANH BAC *</pattern><template>Trên 5 triệu đồng bị xử lý hình sự.</template></category>
+    <category><pattern>* MA TUY *</pattern><template>Tội phạm ma túy có khung hình phạt rất nặng, lên tới tử hình.</template></category>
+</topic>
+
+<!-- LOGIC SLOT FILLING -->
+<category>
+    <pattern>LOI VUOT DEN DO</pattern>
+    <template>
+        <think><set name="loilam">VUOT DEN DO</set></think>
+        <condition name="loaixe">
+            <li value="">Mức phạt khác nhau. Bạn đi XE MAY hay O TO?</li>
+            <li><srai>XU LY VI PHAM</srai></li>
+        </condition>
+    </template>
+</category>
+<category><pattern>* VUOT DEN DO *</pattern><template><srai>LOI VUOT DEN DO</srai></template></category>
+
+<category><pattern>XE MAY</pattern><that>MUC PHAT KHAC NHAU BAN DI XE MAY HAY O TO</that><template><think><set name="loaixe">XE MAY</set></think><srai>XU LY VI PHAM</srai></template></category>
+<category><pattern>O TO</pattern><that>MUC PHAT KHAC NHAU BAN DI XE MAY HAY O TO</that><template><think><set name="loaixe">O TO</set></think><srai>XU LY VI PHAM</srai></template></category>
+
+<category>
+    <pattern>XU LY VI PHAM</pattern>
+    <template>
+        <condition name="loilam" value="VUOT DEN DO">
+            <condition name="loaixe">
+                <li value="XE MAY">👉 Xe máy vượt đèn đỏ: Phạt 800k - 1tr, tước bằng 1-3 tháng.</li>
+                <li value="O TO">👉 Ô tô vượt đèn đỏ: Phạt 4tr - 6tr, tước bằng 1-3 tháng.</li>
+            </condition>
+        </condition>
+        <think><set name="loaixe"></set></think>
+    </template>
+</category>
+
+<!-- TIỆN ÍCH -->
+<category><pattern>THOAT</pattern><template><think><set name="topic"></set></think>Đã thoát chủ đề.</template></category>
+<category><pattern>TOI TEN LA *</pattern><template><think><set name="username"><star/></set></think>Chào <get name="username"/>.</template></category>
+
+<!-- TỪ NỐI -->
+<category><pattern>THE CON *</pattern><template><srai><star/></srai></template></category>
+<category><pattern>VAY CON *</pattern><template><srai><star/></srai></template></category>
+<category><pattern>CON * THI SAO</pattern><template><srai><star/></srai></template></category>
+<category><pattern>HIEU ROI</pattern><template>Tuyệt vời. Bạn muốn hỏi tiếp vấn đề gì không?</template></category>
+<category><pattern>CAM ON</pattern><template>Rất vui được giúp bạn.</template></category>
+
+</aiml>

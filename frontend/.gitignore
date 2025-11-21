@@ -1,0 +1,84 @@
+==========================
+
+1. PYTHON & BACKEND
+
+==========================
+
+pycache/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+
+Database SQLite Local (Tùy chọn: Bỏ comment dòng dưới nếu không muốn up DB lên)
+
+backend/chatbot_data.db
+
+==========================
+
+2. DỮ LIỆU LỚN (QUAN TRỌNG)
+
+==========================
+
+Bỏ qua thư mục dataset 1GB để tránh lỗi Github
+
+data/dataset/
+
+File não AIML (nếu file này quá lớn >100MB thì bỏ comment dòng dưới)
+
+data/bot_brain.brn
+
+==========================
+
+3. FRONTEND & NODEJS (STANDARD)
+
+==========================
+
+Logs
+
+logs
+.log
+npm-debug.log
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+Dependency directories
+
+node_modules
+dist
+dist-ssr
+*.local
+
+Cấu hình cụ thể cho thư mục frontend (để đảm bảo an toàn tuyệt đối)
+
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+==========================
+
+4. EDITOR & HỆ THỐNG
+
+==========================
+
+VS Code
+
+.vscode/*
+!.vscode/extensions.json
+
+IDEs khác
+
+.idea
+*.suo
+.ntvs
+*.njsproj
+*.sln
+*.sw?
+
+Hệ điều hành
+
+.DS_Store
+Thumbs.db

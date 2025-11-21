@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* --- 1. BIẾN MÀU SẮC & THEME --- */
+:root {
+  /* Light Mode */
+  --bg-body: #f0f2f5;
+  --bg-sidebar: #f9fafb;
+  --bg-main: #ffffff;
+  --bg-input: #ffffff;
+  --bg-bot-msg: #f3f4f6;
+  
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --text-placeholder: #9ca3af;
+  
+  --border-color: #e5e7eb;
+  
+  --primary-color: #1e3a8a; /* Xanh Navy */
+  --primary-hover: #1e40af;
+  --primary-text: #ffffff;
+  
+  --hover-item: #f3f4f6;
+  --shadow-color: rgba(0,0,0,0.05);
+  
+  --scrollbar-track: #f1f1f1;
+  --scrollbar-thumb: #c1c1c1;
+}
+
+[data-theme="dark"] {
+  /* Dark Mode */
+  --bg-body: #111827;
+  --bg-sidebar: #1f2937;
+  --bg-main: #0f172a;
+  --bg-input: #1f2937;
+  --bg-bot-msg: #374151;
+  
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --text-placeholder: #6b7280;
+  
+  --border-color: #374151;
+  
+  --primary-color: #3b82f6;
+  --primary-hover: #2563eb;
+  --primary-text: #ffffff;
+  
+  --hover-item: #374151;
+  --shadow-color: rgba(0,0,0,0.3);
+  
+  --scrollbar-track: #1f2937;
+  --scrollbar-thumb: #4b5563;
+}
+
+/* --- 2. GLOBAL RESET --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  height: 100vh;
+  overflow: hidden;
+}

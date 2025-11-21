@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+<!-- FILE VÁ LỖ HỔNG KIẾN THỨC THỦ CÔNG -->
+
+<!-- 1. HÔN NHÂN (Đã đủ) -->
+<category><pattern>* HO SO KET HON *</pattern><template>Đăng ký kết hôn cần: Tờ khai, CCCD hai bên, Giấy xác nhận độc thân. Nộp tại UBND xã/phường.</template></category>
+<category><pattern>* AN PHI *</pattern><template>Án phí ly hôn sơ thẩm là 300.000đ (nếu không tranh chấp tài sản).</template></category>
+<category><pattern>* QUYEN NUOI CON *</pattern><template>Con dưới 36 tháng giao mẹ nuôi. Con trên 7 tuổi phải xem xét nguyện vọng của con.</template></category>
+<category><pattern>* CHIA TAI SAN *</pattern><template>Tài sản chung chia đôi (có tính đến công sức đóng góp). Tài sản riêng của ai người nấy giữ.</template></category>
+
+<!-- 2. GIAO THÔNG (Bổ sung Mũ bảo hiểm) -->
+<category><pattern>* QUEN BANG LAI *</pattern><template>Lỗi quên bằng lái (có nhưng không mang): Xe máy phạt 100k-200k. Ô tô phạt 200k-400k.</template></category>
+<category><pattern>* SAI LAN *</pattern><template>Đi sai làn đường: Xe máy phạt 400k-600k. Ô tô phạt 3-5 triệu + tước bằng.</template></category>
+<!-- MỚI -->
+<category><pattern>* MU BAO HIEM *</pattern><template>Lỗi không đội mũ bảo hiểm (hoặc cài quai không đúng quy cách): Phạt tiền từ 400.000đ - 600.000đ.</template></category>
+<category><pattern>* TOC DO *</pattern><template>Chạy quá tốc độ từ 5-10km/h: Xe máy phạt 300k-400k; Ô tô phạt 800k-1tr.</template></category>
+
+<!-- 3. ĐẤT ĐAI (Đã đủ) -->
+<category><pattern>* CAP MOI SO DO *</pattern><template>Cấp mới Sổ đỏ cần giấy tờ chứng minh nguồn gốc đất trước 1/7/2014 hoặc xác nhận của UBND xã về đất không tranh chấp.</template></category>
+<category><pattern>* PHI SANG TEN *</pattern><template>Phí sang tên gồm: Thuế thu nhập cá nhân 2% và Lệ phí trước bạ 0.5%.</template></category>
+
+<!-- 4. CƯ TRÚ (Đã đủ) -->
+<category><pattern>* XAC NHAN CU TRU *</pattern><template>Giấy xác nhận cư trú (CT07) xin tại Công an xã/phường, dùng thay Sổ hộ khẩu giấy.</template></category>
+<category><pattern>* SO HO KHAU *</pattern><template>Sổ hộ khẩu giấy đã hết giá trị sử dụng. Mọi thủ tục hiện nay dùng CCCD gắn chip hoặc VNeID.</template></category>
+
+<!-- 5. LAO ĐỘNG (Bổ sung Rút BHXH) -->
+<category><pattern>* HOP DONG LAO DONG *</pattern><template>Hợp đồng lao động phải lập thành văn bản. Có 2 loại: Xác định thời hạn (tối đa 36 tháng) và Không xác định thời hạn.</template></category>
+<!-- MỚI -->
+<category><pattern>* RUT BHXH *</pattern><template>Điều kiện rút BHXH 1 lần: Sau 1 năm nghỉ việc mà không đóng tiếp BHXH, hoặc ra nước ngoài định cư.</template></category>
+<category><pattern>* 1 LAN *</pattern><template><srai>* RUT BHXH *</srai></template></category>
+
+<!-- 6. QUÂN SỰ (Bổ sung Cận thị) -->
+<category><pattern>* TRON KHAM *</pattern><template>Không có mặt đúng thời gian/địa điểm kiểm tra, khám sức khỏe: Phạt tiền từ 10 - 12 triệu đồng.</template></category>
+<!-- MỚI -->
+<category><pattern>* CAN THI *</pattern><template>Cận thị từ 1.5 độ trở lên được xếp loại sức khỏe 3, 4, 5, 6 -> Tạm hoãn nghĩa vụ quân sự.</template></category>
+
+<!-- 7. HÌNH SỰ (Đã đủ) -->
+<category><pattern>* TROM CAP *</pattern><template>Trộm cắp tài sản dưới 2 triệu: Phạt hành chính. Từ 2 triệu trở lên: Truy cứu trách nhiệm hình sự.</template></category>
+<category><pattern>* DANH BAC *</pattern><template>Đánh bạc trái phép dưới mọi hình thức (tổng tiền trên 5 triệu) sẽ bị xử lý hình sự.</template></category>
+
+<!-- 8. DOANH NGHIỆP (Đã đủ) -->
+<category><pattern>* THANH LAP CONG TY *</pattern><template>Hồ sơ nộp tại Phòng Đăng ký kinh doanh - Sở Kế hoạch &amp; Đầu tư tỉnh/thành phố.</template></category>
+<category><pattern>* GIAI THE *</pattern><template>Doanh nghiệp phải thanh toán hết các khoản nợ lương, thuế, bảo hiểm trước khi nộp hồ sơ giải thể.</template></category>
+
+<!-- CÁC CÂU HỎI CƠ BẢN KHÁC -->
+<category><pattern>* DI TU *</pattern><template>Đi tù là hình phạt tước quyền tự do, giam giữ tại trại giam có thời hạn hoặc chung thân.</template></category>
+
+</aiml>
