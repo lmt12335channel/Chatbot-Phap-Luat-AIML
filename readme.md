@@ -73,7 +73,9 @@ PROJECT\_ROOT\
 ├── 📂 data/                   # Chứa dữ liệu huấn luyện\
 │   ├── dataset/               # Dữ liệu thô (Parquet/Excel)\
 │   ├── phapluat\_final.aiml    # File kiến thức sinh tự động\
-│   ├── aiml\_advanced.aiml     # Kịch bản hội thoại nâng cao\
+│   ├── aiml\_advanced.aiml     # Kịch bản hội thoại\
+│   ├── greetings.aiml          # Kịch bản hỏi đáp giao tiếp\
+│   ├── manual\_fixes.aiml     # Kịch bản sửa lỗi\
 │   └── bot\_brain.brn          # File não binary (tải nhanh)\
 │\
 ├── 📂 backend/                # Mã nguồn Python\
@@ -81,7 +83,7 @@ PROJECT\_ROOT\
 │   ├── convert_to_aiml.py     # Script huấn luyện/sinh dữ liệu\
 │   └── requirements.txt       # Danh sách thư viện\
 │\
-├──  📂 scripts/ 
+├──  📂 scripts/                  # Mã nguồn Python\
 │      ├── convert_to_aiml.py     # Script huấn luyện/sinh dữ liệu\
 │      ├── legal\_dictionary.py   # Từ điển từ khóa pháp lý\
 │      ├── bot\_config.py         # Cấu hình phản hồi\
